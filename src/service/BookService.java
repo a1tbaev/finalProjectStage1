@@ -10,15 +10,15 @@ public interface BookService {
 
     List<Book> getAllBooks();
 
-    List<Book> getBooksByGenre(String genre);
+    List<Book> getBooksByGenre(String genre) throws MyException;
 
-    Book removeBookById(Long id);
+    Book removeBookById(Long id) throws MyException;
 
     List<Book> sortBooksByPriceInDescendingOrder();
 
     List<Book> filterBooksByPublishedYear();// Konsolgo akyrky 10 jilda chygarylgan kitepter chyksyn
 
-    List<Book> getBookByInitialLetter();
+    List<Book> getBookByInitialLetter() throws MyException;
 
     Book maxPriceBook();
 

@@ -11,15 +11,15 @@ public interface UserService{
 
     List<User> findAllUsers();
 
-    User findUserById(Long id);
+    User findUserById(Long id) throws MyException;
 
-    String removeUserByName(String name);
+    String removeUserByName(String name) throws MyException;
 
     void updateUser(Long id);//kaisil pole ozgorsun dep surap, oshogo jarasha ozgortuu
 
     void groupUsersByGender();
 
-    String buyBooks(String name, List<Book>books);
+    String buyBooks(String name, List<Book>books) throws MyException;
 
 
 }
